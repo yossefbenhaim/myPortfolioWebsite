@@ -35,6 +35,9 @@ module.exports = {
 			  dark: '#047857',
 			},
 		  },
+		  gridTemplateColumns: {
+			'2-max': 'repeat(2, max-content)',
+		  },
 		},
 	  },
 	plugins: [],

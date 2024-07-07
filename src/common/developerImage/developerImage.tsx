@@ -1,5 +1,4 @@
-import React from 'react';
-import developer from '../../../assets/images/developer.png';
+import developer from '../../assets/images/developer.png';
 
 
 const DeveloperImage = () => {
