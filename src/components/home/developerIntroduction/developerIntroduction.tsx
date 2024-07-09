@@ -1,21 +1,16 @@
 import React from 'react';
 import git from '../../../assets/icons/git.svg';
-import linkedin from '../../../assets/icons/linkedin-2.svg';
+import linkedin from '../../../assets/icons/linkedin.svg';
 import { useLocation } from 'react-router-dom';
 import { PathName } from 'models/enums/pathName';
+import GenericIconsList from 'common/genericIconsList/genericIconsList';
+import { IconOptions } from 'models/interfaces/iconOptions';
+import useIntersectionObserver from 'components/about/skills/useIntersectionObserver';
 
 export const DEVELOPER_FIRST_NAME = 'Yossef';
 export const DEVELOPER_LAST_NAME = 'Ben Haim';
 
-interface IconOptions {
-	icon: string;
-	url: string;
-}
 
-const ContactIcons: IconOptions[] = [
-	{ icon: git, url: 'https://github.com/yossefbenhaim' },
-	{ icon: linkedin, url: 'https://www.linkedin.com/in/yossef-ben-haim/' },
-];
 
 interface Props {
 	openingSentence1: string;
@@ -25,11 +20,18 @@ interface Props {
 	buttonText: string;
 }
 
+const contactIcons: IconOptions[] = [
+	{ icon: git, url: 'https://github.com/yossefbenhaim' },
+	{ icon: linkedin, url: 'https://www.linkedin.com/in/yossef-ben-haim/' },
+];
+
 const DeveloperIntroduction = ({ buttonText, documentationText, documentationTitle, openingSentence1, openingSentence2 }: Props) => {
 	const currentPath = useLocation();
-
+	const [containerRef, isVisible] = useIntersectionObserver({
+		threshold: 0.1
+	});
 	return (
-		<div className={` animate-slide-in-right h-[80%] w-[40%] justify-center text-white flex flex-col gap-[5%]`}>
+		<div ref={containerRef} className={` ${isVisible ? 'animate-slide-in-right' : ' '} h-[80%] w-[40%] justify-center text-white flex flex-col gap-[5%]`}>
 			<div className="flex flex-row gap-2 w-[150px]">
 				<p className="text-xl">{openingSentence1}</p>
 				<p className="text-primary-color text-xl">{openingSentence2}</p>
@@ -42,12 +44,7 @@ const DeveloperIntroduction = ({ buttonText, documentationText, documentationTit
 			</button>
 			{currentPath.pathname === PathName.HOME &&
 				<div className="flex flex-row w-full h-[5%] gap-5">
-					{ContactIcons.map((item) => (
-						<a key={item.url} href={item.url} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-							<img className="bg-primary-color rounded-3xl transform transition-transform duration-300 hover:-translate-y-1 hover:scale-110"
-								src={item.icon} alt="GitHub" width="30px" height="30px" />
-						</a>
-					))}
+					<GenericIconsList contactIcons={contactIcons} />
 				</div>
 			}
 		</div>
