@@ -11,7 +11,7 @@ const OPENING_SENTENCE_2 = `I'm`
 const Home: React.FC = () => {
 
 	return (
-		<div className="h-full w-full flex flex-row justify-between items-center">
+		<div className=" pt-12 px-[10%] h-full w-full flex flex-row justify-between items-start">
 			<DeveloperIntroduction
 				buttonText={BUTTON_TEXT}
 				documentationText={DOCUMENTATION_TEXT}

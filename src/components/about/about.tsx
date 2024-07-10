@@ -11,7 +11,7 @@ const OPENING_SENTENCE_2 = `intro`
 
 const About = () => {
 	return (
-		<div className="h-[1250px]">
+		<div className="h-[1250px] px-[10%]">
 			<div className='flex flex-row w-full h-[50%] justify-between text-5xl'>
 				<DeveloperImage />
 				<DeveloperIntroduction

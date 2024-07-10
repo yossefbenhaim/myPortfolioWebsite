@@ -26,7 +26,7 @@ const Navbar = () => {
 	}
 
 	return (
-		<div className='sticky top-0 px-[10%] w-full h-[10%] bg-[#15152a]/20 items-end flex flex-row justify-between  backdrop-blur-lg'>
+		<div className='z-50 sticky top-0 px-[10%] w-full h-[10%] bg-[#15152a]/20 items-end flex flex-row justify-between  backdrop-blur-lg'>
 			<div className='flex flex-row gap-2 w-[30%]'>
 				<p className='text-white font-semibold'>{DEVELOPER_FIRST_NAME}</p>
 				<p className='text-primary-color font-semibold'>{DEVELOPER_LAST_NAME}</p>

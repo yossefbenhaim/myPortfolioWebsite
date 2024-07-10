@@ -5,7 +5,7 @@ const Library = () => {
 	return (
 		<div className=" h-[100vh] ">
 			<Navbar />
-			<div className='px-[10%]  h-[80%]'>
+			<div className='  h-[80%]'>
 				<Outlet />
 			</div>
 		</div>

@@ -1,15 +1,14 @@
-import React from 'react';
-import git from '../../../assets/icons/git.svg';
-import linkedin from '../../../assets/icons/linkedin.svg';
 import { useLocation } from 'react-router-dom';
 import { PathName } from 'models/enums/pathName';
-import GenericIconsList from 'common/genericIconsList/genericIconsList';
 import { IconOptions } from 'models/interfaces/iconOptions';
+
 import useIntersectionObserver from 'components/about/skills/useIntersectionObserver';
+import GenericIconsList from 'common/genericIconsList/genericIconsList';
+import linkedin from '../../../assets/icons/linkedin.svg';
+import git from '../../../assets/icons/git.svg';
 
 export const DEVELOPER_FIRST_NAME = 'Yossef';
 export const DEVELOPER_LAST_NAME = 'Ben Haim';
-
 
 
 interface Props {
@@ -43,7 +42,7 @@ const DeveloperIntroduction = ({ buttonText, documentationText, documentationTit
 				{buttonText}
 			</button>
 			{currentPath.pathname === PathName.HOME &&
-				<div className="flex flex-row w-full h-[5%] gap-5">
+				<div className="flex flex-row w-full  h-[5%] gap-5">
 					<GenericIconsList contactIcons={contactIcons} />
 				</div>
 			}

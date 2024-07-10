@@ -16,7 +16,17 @@ module.exports = {
 				},
 				'slide-in-down': {
 					'0%': {
-						transform: 'translateY(-100%)',
+						transform: 'translateY(-50%)',
+						opacity: '0',
+					  },
+					  '100%': {
+						transform: 'translateY(0)',
+						opacity: '1',
+					  },
+                 },
+				'slide-in-down-footer': {
+					'0%': {
+						transform: 'translateY(-20%)',
 						opacity: '0',
 					  },
 					  '100%': {
@@ -29,7 +39,8 @@ module.exports = {
 			  animation: {
 				'slide-in-left': 'slide-in-left 2s ease-in-out',
 				'slide-in-right': 'slide-in-right 2s ease-in-out',
-				'slide-in-down': 'slide-in-down 2s ease-in-out forwards',
+				'slide-in-down': 'slide-in-down 2s ease-in-out ',
+				'slide-in-down-footer': 'slide-in-down-footer 1.5s ease-in-out ',
 			},
 			  transformOrigin: {
 				'0': '0%',
