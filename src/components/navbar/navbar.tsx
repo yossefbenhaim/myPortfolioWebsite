@@ -1,9 +1,8 @@
-import { DEVELOPER_FIRST_NAME, DEVELOPER_LAST_NAME } from "components/home/developerIntroduction/developerIntroduction"
+import { DEVELOPER_FIRST_NAME, DEVELOPER_LAST_NAME } from "common/developerIntroduction/developerIntroduction"
 import { PathName } from "models/enums/pathName";
 import { NavbarOptions } from "models/enums/toolbarOptions"
 
 import { useNavigate, useLocation } from 'react-router-dom';
-
 
 interface Navbar {
 	item: string,
@@ -28,7 +27,7 @@ const Navbar = () => {
 	return (
 		<div className='z-50 sticky top-0 px-[10%] w-full h-[10%] bg-[#15152a]/20 items-end flex flex-row justify-between  backdrop-blur-lg'>
 			<div className='flex flex-row gap-2 w-[30%]'>
-				<p className='text-white font-semibold'>{DEVELOPER_FIRST_NAME}</p>
+				<p className='text-white/90 font-semibold'>{DEVELOPER_FIRST_NAME}</p>
 				<p className='text-primary-color font-semibold'>{DEVELOPER_LAST_NAME}</p>
 			</div>
 			<div className='w-[80%]'>

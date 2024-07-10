@@ -4,15 +4,19 @@ import { combineReducers } from '@reduxjs/toolkit';
 import { configureStore } from '@reduxjs/toolkit';
 
 import storage from 'redux-persist/lib/storage';
+import { SlicesNames } from 'models/enums/slicesNames';
+import isContactWithMe from './slice/isContactWithMe';
 
 const persistConfig = {
     key: 'root',
     type: storage,
     storage,
-    whitelist: [],
+    whitelist: [SlicesNames.IS_CONTACT_WITH_ME],
 };
 
-const rootReducer = combineReducers({});
+const rootReducer = combineReducers({
+    [SlicesNames.IS_CONTACT_WITH_ME]: isContactWithMe,
+});
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 

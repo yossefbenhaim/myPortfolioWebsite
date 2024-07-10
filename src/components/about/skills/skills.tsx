@@ -1,4 +1,4 @@
-import DeveloperIntroduction from 'components/home/developerIntroduction/developerIntroduction';
+import DeveloperIntroduction from 'common/developerIntroduction/developerIntroduction';
 import GenericSkill from './genericSkill/genericSkill';
 import useIntersectionObserver from './useIntersectionObserver'; // adjust the path
 

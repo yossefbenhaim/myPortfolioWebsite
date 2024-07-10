@@ -1,5 +1,5 @@
 import React from 'react';
-import DeveloperIntroduction from './developerIntroduction/developerIntroduction';
+import DeveloperIntroduction from '../../common/developerIntroduction/developerIntroduction';
 import DeveloperImage from '../../common/developerImage/developerImage';
 
 const BUTTON_TEXT = `Let's Talk`

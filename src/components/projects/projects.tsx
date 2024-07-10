@@ -38,10 +38,10 @@ const Projects = () => {
 		<div className="flex flex-col pt-[6%] px-[10%] gap-5 items-center h-full ">
 			<div className="flex flex-col justify-center items-center w-full h-[10%]">
 				<div className="flex flex-row gap-2 animate-slide-in-down ">
-					<p className="text-white ">My</p>
+					<p className="text-white/90  ">My</p>
 					<p className="text-primary-color">Jobs</p>
 				</div>
-				<p className="text-white text-2xl font-semibold animate-slide-in-down delay-500"> Recent Project</p>
+				<p className="text-white/90 text-2xl font-semibold animate-slide-in-down delay-500"> Recent Project</p>
 			</div>
 			<div className='text-primary-color w-full justify-center items-start flex flex-row gap-4' >
 				{ProjectList.map((project, index) => (

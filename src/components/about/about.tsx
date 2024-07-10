@@ -1,5 +1,5 @@
 import DeveloperImage from "common/developerImage/developerImage"
-import DeveloperIntroduction from "components/home/developerIntroduction/developerIntroduction"
+import DeveloperIntroduction from "common/developerIntroduction/developerIntroduction"
 import Skills from "./skills/skills"
 
 const BUTTON_TEXT = `Contact me`

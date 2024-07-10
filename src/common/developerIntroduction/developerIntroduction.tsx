@@ -4,8 +4,9 @@ import { IconOptions } from 'models/interfaces/iconOptions';
 
 import useIntersectionObserver from 'components/about/skills/useIntersectionObserver';
 import GenericIconsList from 'common/genericIconsList/genericIconsList';
-import linkedin from '../../../assets/icons/linkedin.svg';
-import git from '../../../assets/icons/git.svg';
+import linkedin from '../../assets/icons/linkedin.svg';
+import git from '../../assets/icons/git.svg';
+import GenericButton from 'common/genericButton/genericButton';
 
 export const DEVELOPER_FIRST_NAME = 'Yossef';
 export const DEVELOPER_LAST_NAME = 'Ben Haim';
@@ -29,18 +30,20 @@ const DeveloperIntroduction = ({ buttonText, documentationText, documentationTit
 	const [containerRef, isVisible] = useIntersectionObserver({
 		threshold: 0.1
 	});
+
+
 	return (
-		<div ref={containerRef} className={` ${isVisible ? 'animate-slide-in-right' : ' '} h-[80%] w-[40%] justify-center text-white flex flex-col gap-[5%]`}>
+		<div ref={containerRef} className={` ${isVisible ? 'animate-slide-in-right' : ' '} h-[80%] w-[40%] justify-center text-white/90  flex flex-col gap-[5%]`}>
 			<div className="flex flex-row gap-2 w-[150px]">
 				<p className="text-xl">{openingSentence1}</p>
 				<p className="text-primary-color text-xl">{openingSentence2}</p>
 			</div>
 			{currentPath.pathname === PathName.HOME && <p className="text-primary-color font-bold text-5xl">{DEVELOPER_FIRST_NAME + ' ' + DEVELOPER_LAST_NAME}</p>}
-			<p className="text-3xl">{documentationTitle}</p>
+			<p className="text-3xl text-white/90 ">{documentationTitle}</p>
 			<p className="text-gray-400 text-xl">{documentationText}</p>
-			<button className="w-[110px] h-[50px] bg-primary-color text-base rounded-lg hover:bg-primary-color/80">
-				{buttonText}
-			</button>
+			<div className='w-[140px]'>
+				<GenericButton name={buttonText} />
+			</div>
 			{currentPath.pathname === PathName.HOME &&
 				<div className="flex flex-row w-full  h-[5%] gap-5">
 					<GenericIconsList contactIcons={contactIcons} />

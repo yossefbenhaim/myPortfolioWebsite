@@ -16,7 +16,7 @@ const Footer = () => {
 	];
 
 	return (
-		<div className="bg-black/60 w-full h-[35%]">
+		<div className="bg-black/40 w-full h-[35%]">
 			<div ref={containerRef} className={`${isVisible ? 'animate-slide-in-down-footer' : ''} text-white  h-full  flex flex-row justify-between items-center px-[10%]`}>
 				<div className="flex flex-col gap-2 justify-center items-start  w-[35%]">
 					<div className="text-xl font-semibold flex flex-row gap-2">
