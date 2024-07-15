@@ -18,6 +18,7 @@ interface Props {
 	documentationTitle?: string;
 	documentationText: string;
 	buttonText: string;
+	pathName: string;
 }
 
 const contactIcons: IconOptions[] = [
@@ -25,15 +26,17 @@ const contactIcons: IconOptions[] = [
 	{ icon: linkedin, url: 'https://www.linkedin.com/in/yossef-ben-haim/' },
 ];
 
-const DeveloperIntroduction = ({ buttonText, documentationText, documentationTitle, openingSentence1, openingSentence2 }: Props) => {
+const DeveloperIntroduction = ({ pathName, buttonText, documentationText, documentationTitle, openingSentence1, openingSentence2 }: Props) => {
 	const currentPath = useLocation();
+
 	const [containerRef, isVisible] = useIntersectionObserver({
 		threshold: 0.1
 	});
 
 
+
 	return (
-		<div ref={containerRef} className={` ${isVisible ? 'animate-slide-in-right' : ' '} h-[80%] w-[40%] justify-center text-white/90  flex flex-col gap-[5%]`}>
+		<div ref={containerRef} className={` ${isVisible ? 'animate-slide-in-right' : 'opacity-0'}  h-[80%] w-[50%] justify-center text-white/90  flex flex-col gap-[5%]`}>
 			<div className="flex flex-row gap-2 w-[150px]">
 				<p className="text-xl">{openingSentence1}</p>
 				<p className="text-primary-color text-xl">{openingSentence2}</p>
@@ -42,7 +45,7 @@ const DeveloperIntroduction = ({ buttonText, documentationText, documentationTit
 			<p className="text-3xl text-white/90 ">{documentationTitle}</p>
 			<p className="text-gray-400 text-xl">{documentationText}</p>
 			<div className='w-[140px]'>
-				<GenericButton name={buttonText} />
+				<GenericButton pathNavigate={pathName} name={buttonText} />
 			</div>
 			{currentPath.pathname === PathName.HOME &&
 				<div className="flex flex-row w-full  h-[5%] gap-5">

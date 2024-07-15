@@ -39,7 +39,7 @@ module.exports = {
 			  animation: {
 				'slide-in-left': 'slide-in-left 2s ease-in-out',
 				'slide-in-right': 'slide-in-right 2s ease-in-out',
-				'slide-in-down': 'slide-in-down 2s ease-in-out ',
+				'slide-in-down': 'slide-in-down 1.5s ease-in-out ',
 				'slide-in-down-footer': 'slide-in-down-footer 1.5s ease-in-out ',
 			},
 			  transformOrigin: {
@@ -62,10 +62,10 @@ module.exports = {
 			'2-max': 'repeat(2, max-content)',
 		  },
 		  backgroundImage: {
-			'custom-gradient': 'linear-gradient(180deg, hsla(0, 0%, 0%, 0) 0%, #24cf92 120%)',
+			'custom-gradient': 'linear-gradient(180deg, hsla(0, 0%, 0%, 0) 0%, black 120%)',
 		  },
 		},
 	  },
-	plugins: [],
+	plugins: [require('tailwind-scrollbar')({nocompatible: true})],
   }
   

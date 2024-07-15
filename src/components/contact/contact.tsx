@@ -14,7 +14,7 @@ const Contact = () => {
 	const IsContactWithMe = useAppSelector((state) => state.isContactWithMe.isContactWithMe);
 
 	return (
-		<div className=" w-full h-full">
+		<div className=" w-full h-full ">
 			{IsContactWithMe ? <ThankYouContact />
 				:
 				<div className='  px-[10%] w-full h-[90vh] flex flex-col gap-5 items-center pt-[5%] pb-[2%] '>

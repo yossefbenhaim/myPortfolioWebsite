@@ -7,6 +7,8 @@ import emailjs from '@emailjs/browser';
 import { useDispatch } from 'react-redux';
 import { setIsContactWithMe } from 'redux/slice/isContactWithMe';
 import GenericButton from 'common/genericButton/genericButton';
+import { PathName } from 'models/enums/pathName';
+
 
 const SENS_MESSAGE = 'Send Message'
 
@@ -23,13 +25,13 @@ const ContactForm = () => {
 		resolver: zodResolver(ContactSchema)
 	});
 
-	const SERVICE_ID = 'service_n9ms175'
-	const YOUR_TEMPLATE_ID = 'template_f283kxi'
-	const PUBLIC_KEY = 'yXAO5AahI2l_OQJrd'
+	const SERVICE_ID = process.env['VITE_SERVICE_ID'] as string
+	const YOUR_TEMPLATE_ID = process.env['VITE_YOUR_TEMPLATE_ID'] as string
+	const PUBLIC_KEY = process.env['VITE_PUBLIC_KEY'] as string
 
 	const { handleSubmit } = methods;
 
-	const onSubmit: SubmitHandler<ContactFormType> = (data) => {
+	const onSubmit: SubmitHandler<ContactFormType> = () => {
 		if (form.current) {
 			emailjs.sendForm(SERVICE_ID, YOUR_TEMPLATE_ID, form.current, PUBLIC_KEY)
 				.then(
@@ -58,7 +60,7 @@ const ContactForm = () => {
 					</div>
 				</div>
 				<div>
-					<GenericButton name={SENS_MESSAGE} />
+					<GenericButton pathNavigate={PathName.CONTACT} name={SENS_MESSAGE} />
 				</div>
 			</form>
 		</FormProvider>

@@ -1,16 +1,20 @@
 import ProjectCard from "./projectCard/projectCard";
-import musicApplication from '../../assets/images/spoofy.jfif';
+import musicApplication from '../../assets/images/musicApplication.png';
+import authenticationService from '../../assets/images/authenticationService.png';
+import myProfileWebsite from '../../assets/images/myProfileWebsite.png';
 import ProjectView from "./projectView/projectView";
+
 import { useState, useEffect, useRef } from "react";
 import { Project } from "models/interfaces/project";
 
 const ProjectList: Project[] = [
-	{ img: musicApplication, name: 'musicApplication1' },
-	{ img: musicApplication, name: 'musicApplication2' },
-	{ img: musicApplication, name: 'musicApplication3' },
+	{ img: musicApplication, name: 'Music Application', url: '', gitUrl: 'https://github.com/yossefbenhaim/spoofy-music-app', gif: '' },
+	{ img: myProfileWebsite, name: 'My Profile Website', url: '', gitUrl: 'https://github.com/yossefbenhaim/myPortfolioWebsite', gif: '' },
+	{ img: authenticationService, name: 'Authentication Service', url: '', gitUrl: 'https://github.com/yossefbenhaim/AuthenticationService', gif: '' },
 ]
 
 const Projects = () => {
+	const [currentProjectName, setCurrentProjectName] = useState<string | undefined>(undefined)
 	const [currentProject, setCurrentProject] = useState<Project | undefined>(undefined)
 	const [isProductViewOpen, setIsProductViewOpen] = useState<boolean>(false);
 	const containerRef = useRef<HTMLDivElement>(null)
@@ -22,15 +26,20 @@ const Projects = () => {
 				setIsProductViewOpen(false)
 			}
 		}
-
 		document.addEventListener('mousedown', handleOutsideCard);
 		return () => {
 			document.removeEventListener('mousedown', handleOutsideCard);
 		}
 	}, [])
 
-	const handleOpenProject = (project: Project) => {
+
+	useEffect(() => {
+		const project = ProjectList.find((project) => project.name === currentProjectName)
 		setCurrentProject(project)
+	}, [currentProjectName])
+
+	const handleOpenProject = (projectName: string) => {
+		setCurrentProjectName(projectName)
 		setIsProductViewOpen(true)
 	}
 
@@ -43,9 +52,9 @@ const Projects = () => {
 				</div>
 				<p className="text-white/90 text-2xl font-semibold animate-slide-in-down delay-500"> Recent Project</p>
 			</div>
-			<div className='text-primary-color w-full justify-center items-start flex flex-row gap-4' >
+			<div className='text-primary-color w-full gap-2 justify-around items-center flex flex-row' >
 				{ProjectList.map((project, index) => (
-					<div className="" key={index} >
+					<div className="animate-slide-in-down" key={index} >
 						<ProjectCard setIsProductViewOpen={handleOpenProject} projectImg={project.img} projectName={project.name} />
 					</div>
 				))}

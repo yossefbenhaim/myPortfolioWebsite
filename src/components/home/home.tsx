@@ -1,9 +1,10 @@
 import React from 'react';
 import DeveloperIntroduction from '../../common/developerIntroduction/developerIntroduction';
 import DeveloperImage from '../../common/developerImage/developerImage';
+import { PathName } from 'models/enums/pathName';
 
 const BUTTON_TEXT = `Let's Talk`
-const DOCUMENTATION_TEXT = 'ugiub bi bvuvi  bviu v hv ijvu vj j bkuvi jk vkj '
+const DOCUMENTATION_TEXT = `Experienced Full Stack Developer proficient in front-end and back-end technologies, adept in web development.`;
 const DOCUMENTATION_TITLE = 'Full Stack Developer'
 const OPENING_SENTENCE_1 = 'Hello'
 const OPENING_SENTENCE_2 = `I'm`
@@ -13,6 +14,7 @@ const Home: React.FC = () => {
 	return (
 		<div className=" pt-12 px-[10%] h-full w-full flex flex-row justify-between items-start">
 			<DeveloperIntroduction
+				pathName={PathName.CONTACT}
 				buttonText={BUTTON_TEXT}
 				documentationText={DOCUMENTATION_TEXT}
 				documentationTitle={DOCUMENTATION_TITLE}
