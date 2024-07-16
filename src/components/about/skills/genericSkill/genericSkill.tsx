@@ -1,11 +1,7 @@
-import React from 'react'
-
-
 interface Props {
 	number: number;
 	nameSkill: string;
 }
-
 
 const GenericSkill = ({ nameSkill, number }: Props) => {
 	return (

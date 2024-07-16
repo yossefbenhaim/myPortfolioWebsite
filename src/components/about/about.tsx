@@ -1,7 +1,9 @@
+import { PathName } from "models/enums/pathName"
+
 import DeveloperImage from "common/developerImage/developerImage"
 import DeveloperIntroduction from "common/developerIntroduction/developerIntroduction"
 import Skills from "./skills/skills"
-import { PathName } from "models/enums/pathName"
+
 
 const BUTTON_TEXT = `Contact me`
 const DOCUMENTATION_TEXT = 'As a Full Stack Developer at IDF, I led complex projects, developed secure systems using Node.js and Express, integrated Kafka for data processing, and implemented a React application with dynamic geospatial mapping and microservices. I have a Program Engineer from Ashkelon College.'

@@ -1,7 +1,8 @@
+import { PathName } from 'models/enums/pathName';
+
 import DeveloperIntroduction from 'common/developerIntroduction/developerIntroduction';
 import GenericSkill from './genericSkill/genericSkill';
-import useIntersectionObserver from './useIntersectionObserver'; // adjust the path
-import { PathName } from 'models/enums/pathName';
+import useIntersectionObserver from './useIntersectionObserver';
 
 const SKILLS = [
 	'HTML & CSS',

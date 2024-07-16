@@ -1,10 +1,5 @@
-
-
-
-
 import { useRef, useEffect } from 'react';
 import Lottie, { AnimationItem } from 'lottie-web';
-
 
 const ThankYouAnimation = () => {
 

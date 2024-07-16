@@ -1,10 +1,11 @@
-import Home from "./home/home"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { PathName } from "models/enums/pathName"
-import About from "./about/about"
+
 import Projects from "./projects/projects"
 import Contact from "./contact/contact"
 import Library from "./library/library"
+import Home from "./home/home"
+import About from "./about/about"
 
 const App = () => {
 	return (

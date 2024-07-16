@@ -1,5 +1,4 @@
 import { IconOptions } from 'models/interfaces/iconOptions';
-import React from 'react';
 
 interface Props {
 	contactIcons: IconOptions[];

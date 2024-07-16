@@ -1,7 +1,8 @@
-import React from 'react';
+import { PathName } from 'models/enums/pathName';
+
 import DeveloperIntroduction from '../../common/developerIntroduction/developerIntroduction';
 import DeveloperImage from '../../common/developerImage/developerImage';
-import { PathName } from 'models/enums/pathName';
+import React from 'react';
 
 const BUTTON_TEXT = `Let's Talk`
 const DOCUMENTATION_TEXT = `Experienced Full Stack Developer proficient in front-end and back-end technologies, adept in web development.`;

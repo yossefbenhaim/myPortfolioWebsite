@@ -1,8 +1,7 @@
 import { DEVELOPER_FIRST_NAME, DEVELOPER_LAST_NAME } from "common/developerIntroduction/developerIntroduction"
-import { PathName } from "models/enums/pathName";
-import { NavbarOptions } from "models/enums/toolbarOptions"
-
 import { useNavigate, useLocation } from 'react-router-dom';
+import { NavbarOptions } from "models/enums/toolbarOptions"
+import { PathName } from "models/enums/pathName";
 
 interface Navbar {
 	item: string,

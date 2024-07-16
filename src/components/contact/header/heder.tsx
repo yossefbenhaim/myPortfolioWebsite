@@ -1,9 +1,7 @@
-
 interface Props {
 	openingSentence1: string,
 	openingSentence2: string,
 	title: string,
-
 }
 
 const Heder = ({ title, openingSentence1, openingSentence2 }: Props) => {

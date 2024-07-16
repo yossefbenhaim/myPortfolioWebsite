@@ -2,9 +2,9 @@ import { TypedUseSelectorHook, useSelector } from 'react-redux';
 import { persistStore, persistReducer } from 'redux-persist';
 import { combineReducers } from '@reduxjs/toolkit';
 import { configureStore } from '@reduxjs/toolkit';
+import { SlicesNames } from 'models/enums/slicesNames';
 
 import storage from 'redux-persist/lib/storage';
-import { SlicesNames } from 'models/enums/slicesNames';
 import isContactWithMe from './slice/isContactWithMe';
 
 const persistConfig = {

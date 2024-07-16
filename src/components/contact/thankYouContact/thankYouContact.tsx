@@ -1,12 +1,9 @@
-import React from 'react'
 import Heder from '../header/heder'
 import ThankYouAnimation from '../thankYouAnimation/thankYouAnimation'
 
 const THANK = 'Thank'
 const YOU = 'You'
 const TO_CONTACT_WITH_ME = 'To Contact With Me'
-
-
 
 const ThankYouContact = () => {
 	return (

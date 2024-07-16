@@ -1,9 +1,9 @@
+import { useAppSelector } from "redux/store";
 
 import Footer from "./footer/footer";
 import ContactForm from "./contactForm/contactForm";
 import Heder from "./header/heder";
 import ThankYouContact from "./thankYouContact/thankYouContact";
-import { useAppSelector } from "redux/store";
 
 const GET_IN = 'Get in'
 const TOUCH = 'Touch'
