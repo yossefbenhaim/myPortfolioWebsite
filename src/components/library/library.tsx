@@ -1,8 +1,14 @@
 import { Outlet } from 'react-router-dom';
 
-import Navbar from 'components/navbar/navbar';
+import Navbar from '../navbar/navbar';
+import UseFetchData from '../hooks/useFetchData';
 
 const Library = () => {
+
+	const { data, loading, error } = UseFetchData({ url: 'https://zenquotes.io/api/random' });
+
+	console.log(data);
+
 	return (
 		<div className=" h-[100vh] ">
 			<Navbar />
