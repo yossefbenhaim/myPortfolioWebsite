@@ -70,7 +70,7 @@ const Projects = () => {
 			</div>
 			{
 				isProductViewOpen &&
-				<div ref={containerRef} className='absolute flex flex-col justify-between w-[700px] h-[60%] bg-black/30 p-1 backdrop-blur-md rounded-2xl'>
+				<div ref={containerRef} className='absolute flex flex-col justify-between w-[700px] h-[63%] bg-black/30 p-1 backdrop-blur-md rounded-2xl'>
 					<ProjectView currentProject={currentProject} />
 				</div>
 			}
