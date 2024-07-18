@@ -20,7 +20,7 @@ const ProjectView = ({ currentProject }: Props) => {
 	return (
 		<>
 			<div className='w-full  justify-center items-center flex h-full '>
-				<img className='w-full h-full justify-center items-center  rounded-2xl ' src={currentProject?.gif ?? loading} />
+				<img className='w-full h-[390px] justify-center items-center  rounded-2xl ' src={currentProject?.gif ?? loading} />
 			</div>
 			<div className='px-2 pt-2 justify-between  h-[60px]  items-center w-full  flex flex-row'>
 				<div className='flex flex-row gap-3  '>
