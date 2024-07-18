@@ -4,6 +4,7 @@ import { Project } from 'models/interfaces/project';
 import GenericIconsList from 'common/genericIconsList/genericIconsList';
 import blackOpen from '../../../assets/icons/blackOpen.svg'
 import git from '../../../assets/icons/git.svg'
+import loading from '../../../assets/gif/loading.gif'
 
 interface Props {
 	currentProject: Project | undefined;
@@ -19,7 +20,7 @@ const ProjectView = ({ currentProject }: Props) => {
 	return (
 		<>
 			<div className='w-full  justify-center items-center flex h-[100%] '>
-				<img className='w-full justify-center items-center  rounded-2xl ' src={currentProject?.gif ?? ''} />
+				<img className='w-full justify-center items-center  rounded-2xl ' src={currentProject?.gif ?? loading} />
 			</div>
 			<div className='p-2 justify-between  h-[15%]  items-center w-full  flex flex-row'>
 				<div className='flex flex-row gap-3  '>
