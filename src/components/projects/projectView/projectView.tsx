@@ -3,8 +3,8 @@ import { Project } from 'models/interfaces/project';
 
 import GenericIconsList from 'common/genericIconsList/genericIconsList';
 import blackOpen from '../../../assets/icons/blackOpen.svg'
-import git from '../../../assets/icons/git.svg'
 import loading from '../../../assets/gif/loading.gif'
+import git from '../../../assets/icons/git.svg'
 
 interface Props {
 	currentProject: Project | undefined;
