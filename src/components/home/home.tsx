@@ -1,5 +1,4 @@
 import { PathName } from 'models/enums/pathName';
-
 import DeveloperIntroduction from '../../common/developerIntroduction/developerIntroduction';
 import DeveloperImage from '../../common/developerImage/developerImage';
 import React from 'react';
@@ -11,9 +10,8 @@ const OPENING_SENTENCE_1 = 'Hello'
 const OPENING_SENTENCE_2 = `I'm`
 
 const Home: React.FC = () => {
-
 	return (
-		<div className=" pt-12 px-[10%] h-full w-full flex flex-row justify-between items-start">
+		<div className="pt-12 px-[10%] h-full w-full flex flex-col gap-5 sm:flex-row  justify-between items-start">
 			<DeveloperIntroduction
 				pathName={PathName.CONTACT}
 				buttonText={BUTTON_TEXT}

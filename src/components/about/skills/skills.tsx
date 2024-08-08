@@ -25,7 +25,7 @@ const Skills = () => {
 	});
 
 	return (
-		<div className="items-start h-[50%] w-full flex flex-row justify-between ">
+		<div className="items-start h-[50%] w-full flex flex-col sm:flex-row justify-between ">
 			<div className='h-[70%] w-full items-start flex flex-row justify-start'>
 				<DeveloperIntroduction
 					pathName={PathName.PROJECTS}

@@ -36,7 +36,7 @@ const DeveloperIntroduction = ({ pathName, buttonText, documentationText, docume
 
 
 	return (
-		<div ref={containerRef} className={` ${isVisible ? 'animate-slide-in-right' : 'opacity-0'}  h-[80%] w-[50%] justify-center text-white/90  flex flex-col gap-[5%]`}>
+		<div ref={containerRef} className={` ${isVisible ? 'animate-slide-in-right' : 'opacity-0'}  sm:h-[80%] sm:w-[50%] justify-center text-white/90  flex flex-col gap-[5%] `}>
 			<div className="flex flex-row gap-2 w-[150px]">
 				<p className="text-xl">{openingSentence1}</p>
 				<p className="text-primary-color text-xl">{openingSentence2}</p>
