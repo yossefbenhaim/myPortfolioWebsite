@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 
 interface Props {
 	name: string
@@ -6,10 +5,8 @@ interface Props {
 }
 
 const GenericButton = ({ name, pathNavigate }: Props) => {
-	const navigation = useNavigate();
 
 	const navigationPage = (path: string) => {
-		navigation(path)
 	}
 
 	return (

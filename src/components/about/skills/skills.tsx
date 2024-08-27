@@ -4,20 +4,40 @@ import DeveloperIntroduction from 'common/developerIntroduction/developerIntrodu
 import GenericSkill from './genericSkill/genericSkill';
 import useIntersectionObserver from './useIntersectionObserver';
 
-const SKILLS = [
-	'HTML & CSS',
-	'TypeScript',
-	'React',
-	'Node.JS',
-	'Docker',
-	'Git',
-];
 
-const OPENING_SENTENCE_1 = 'Favorites';
-const OPENING_SENTENCE_2 = `Skills`;
-const DOCUMENTATION_TITLE = 'My Skills';
-const DOCUMENTATION_TEXT = `See fully what skills i have and perform, to develop the project for you`;
-const BUTTON_TEXT = `See Projects`;
+export interface Skill {
+	name: string,
+	src: string,
+
+}
+const SKILLS: Skill[] = [
+	{ name: 'HTML & CSS', src: '' },
+	{ name: 'TypeScript', src: '' },
+	{ name: 'React', src: '' },
+	{ name: 'Redux / Jotai', src: '' },
+	{ name: 'Vite', src: '' },
+	{ name: 'Mui', src: '' },
+	{ name: 'OpenLayers', src: '' },
+	{ name: 'Recharts', src: '' },
+
+	{ name: 'Node.JS', src: '' },
+	{ name: 'tRPC', src: '' },
+	{ name: 'Express', src: '' },
+	{ name: 'GraphQL', src: '' },
+	{ name: 'Postgraphile', src: '' },
+	{ name: 'Sequelize  ', src: '' },
+	{ name: 'RESTful-APIs', src: '' },
+	{ name: 'Docker', src: '' },
+	{ name: 'Micro-Services', src: '' },
+
+	{ name: 'PostgreSQL ', src: '' },
+	{ name: 'Subscription-ws', src: '' },
+	{ name: 'MongoDB', src: '' },
+
+	{ name: 'Git', src: '' },
+	{ name: 'Docker', src: '' },
+
+];
 
 const Skills = () => {
 	const [containerRef, isVisible] = useIntersectionObserver({
@@ -25,32 +45,18 @@ const Skills = () => {
 	});
 
 	return (
-		<div className="items-start h-[50%] w-full flex flex-col sm:flex-row justify-between ">
-			<div className='h-[70%] w-full items-start flex flex-row justify-start'>
-				<DeveloperIntroduction
-					pathName={PathName.PROJECTS}
-					buttonText={BUTTON_TEXT}
-					documentationText={DOCUMENTATION_TEXT}
-					documentationTitle={DOCUMENTATION_TITLE}
-					openingSentence1={OPENING_SENTENCE_1}
-					openingSentence2={OPENING_SENTENCE_2}
-				/>
-			</div>
+		<div className="bg-blue-500 items-start h-[50%] w-full flex flex-col sm:flex-row justify-between ">
+
 			<div
-				className={`w-[40%] h-[80%] items-start flex flex-col justify-start pt-[4%] 
-					${isVisible
-						?
-						'animate-slide-in-left'
-						: 'opacity-0'
-					}`}
+				className={`animate-slide-in-left w-[40%] h-[80%] items-start flex flex-col justify-start pt-[4%] 
+					`}
 				ref={containerRef}
 			>
-				<div className='grid gap-4 items-center h h-[40%] w-full'>
+				<div className='bg-primary-color/20 grid  grid-rows-[100px_100px] sm:grid-cols-[100px_100px_100px_100px_100px_100px_100px_100px_100px_100px_100px] grid-cols-[100px_100px] gap-x-5 gap-y-5'>
 					{SKILLS.map((skill, index) => (
 						<GenericSkill
 							key={index}
-							nameSkill={skill}
-							number={(index + 1) / 10}
+							skill={skill}
 						/>
 					))}
 				</div>

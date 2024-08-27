@@ -1,7 +1,7 @@
 export enum PathName {
-    HOME = '/',
-    ABOUT = '/About',
-    PROJECTS = '/Projects',
-    CONTACT = '/Contact',
-    LIBRARY = '/library',
+    HOME = 'home',
+    ABOUT = 'about',
+    PROJECTS = 'projects',
+    CONTACT = 'contact',
+    LIBRARY = 'library',
 }

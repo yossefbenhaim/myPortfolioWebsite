@@ -1,13 +1,14 @@
+import { Skill } from "../skills";
+import react from '../../../../assets/icons/react.svg'
 interface Props {
-	number: number;
-	nameSkill: string;
+	skill: Skill;
 }
 
-const GenericSkill = ({ nameSkill, number }: Props) => {
+const GenericSkill = ({ skill }: Props) => {
 	return (
-		<div className='w-full flex flex-row gap-3'>
-			<p className='font-medium  text-primary-color'>{number}.</p>
-			<p className='text-white font-medium'>{nameSkill}</p>
+		<div className='bg-white/40 rounded-lg w-[90px] flex flex-col justify-center items-center gap-1 p-1'>
+			<img className="w-[40px]" src={react} />
+			<h3 className='text-white font-medium text-[10px]'>{skill.name}</h3>
 		</div>
 	)
 }

@@ -14,7 +14,7 @@ const OPENING_SENTENCE_2 = `intro`
 
 const About = () => {
 	return (
-		<div className="sm:h-[1250px] sm:flex-col justify-between h-[2000px] gap-8 w-full px-[10%] flex-row scrollbar scrollbar-thumb-primary-color">
+		<div className="sm:h-[100vh] bg-red-400 sm:flex-col justify-between h-full gap-8 w-full px-[10%] flex-row scrollbar scrollbar-thumb-primary-color">
 			<div className=' pt-2 gap-10 flex flex-col w-full  sm:flex-row sm:h-[40%] justify-between text-5xl '>
 				<DeveloperImage />
 				<DeveloperIntroduction
