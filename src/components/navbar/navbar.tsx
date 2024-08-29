@@ -49,7 +49,7 @@ const Navbar = ({ scrollToSection, activeSection }: Props) => {
 					</button>
 				</div>
 				<div
-					className={`lg:hidden fixed inset-0 bg-black bg-opacity-50 z-40 transition-transform transform ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+					className={`lg:hidden fixed inset-0 bg-black bg-opacity-50 z-40 ${isMobileMenuOpen ? '' : 'hidden'
 						}`}
 				>
 					<div className='relative w-full h-full'>
