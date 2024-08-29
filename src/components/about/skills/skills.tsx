@@ -45,7 +45,7 @@ const Skills = () => {
 	});
 
 	return (
-		<div className=" h-full w-full pl-20 flex flex-col sm:flex-row justify-between items-start ">
+		<div className=" h-full w-full pl-12 flex flex-col sm:flex-row justify-between items-start ">
 			<div
 				className={`animate-slide-in-left w-[40%] h-[80%] items-start flex flex-col justify-start pt-[4%] `}
 				ref={containerRef}
