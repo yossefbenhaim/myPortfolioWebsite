@@ -14,20 +14,21 @@ const OPENING_SENTENCE_2 = `intro`
 
 const About = () => {
 	return (
-		<div className="sm:h-[100vh] bg-red-400 sm:flex-col justify-between h-full gap-8 w-full px-[10%] flex-row scrollbar scrollbar-thumb-primary-color">
+		<div className=" sm:flex-col justify-between h-[50%] gap-8 w-full px-[10%] flex-row ">
 			<div className=' pt-2 gap-10 flex flex-col w-full  sm:flex-row sm:h-[40%] justify-between text-5xl '>
-				<DeveloperImage />
-				<DeveloperIntroduction
-					pathName={PathName.CONTACT}
-					buttonText={BUTTON_TEXT}
-					documentationText={DOCUMENTATION_TEXT}
-					documentationTitle={DOCUMENTATION_TITLE}
-					openingSentence1={OPENING_SENTENCE_1}
-					openingSentence2={OPENING_SENTENCE_2}
-				/>
-			</div>
-			<div className="h-[40%] mt-10">
-				<Skills />
+				<div className="sm:block hidden">
+					<DeveloperImage />
+				</div>
+				<div className="h-[50%]">
+					<DeveloperIntroduction
+						pathName={PathName.CONTACT}
+						buttonText={BUTTON_TEXT}
+						documentationText={DOCUMENTATION_TEXT}
+						documentationTitle={DOCUMENTATION_TITLE}
+						openingSentence1={OPENING_SENTENCE_1}
+						openingSentence2={OPENING_SENTENCE_2}
+					/>
+				</div>
 			</div>
 		</div>
 	)

@@ -29,7 +29,7 @@ const Navbar = ({ scrollToSection, activeSection }: Props) => {
 
 	const navigationPage = (path: string) => {
 		scrollToSection(path);
-		setMobileMenuOpen(false); // Close the menu after navigating on mobile
+		setMobileMenuOpen(false);
 	};
 
 	return (

@@ -40,7 +40,7 @@ const DeveloperIntroduction = ({ pathName, buttonText, documentationText, docume
 			</div>
 			{<p className="text-primary-color font-bold text-5xl">{DEVELOPER_FIRST_NAME + ' ' + DEVELOPER_LAST_NAME}</p>}
 			<p className="text-3xl text-white/90 ">{documentationTitle}</p>
-			<p className="text-gray-400 ">{documentationText}</p>
+			<p className="text-gray-400 text-base">{documentationText}</p>
 			<div className='w-[140px]'>
 				<GenericButton pathNavigate={pathName} name={buttonText} />
 			</div>

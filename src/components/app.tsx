@@ -4,6 +4,7 @@ import Home from './home/home';
 import About from './about/about';
 import Projects from './projects/projects';
 import Contact from './contact/contact';
+import Skills from './about/skills/skills';
 
 const App = () => {
 	const [activeSection, setActiveSection] = useState('');
@@ -57,15 +58,16 @@ const App = () => {
 	};
 
 	return (
-		<div>
+		<div className='flex flex-col justify-between'>
 			<Navbar scrollToSection={scrollToSection} activeSection={activeSection} />
 
 			<div id="home" ref={homeRef} className="h-screen">
 				<Home />
 			</div>
 
-			<div id="about" ref={aboutRef} className="h-screen">
+			<div id="about" ref={aboutRef} className="h-full flex flex-col justify-between">
 				<About />
+				<Skills />
 			</div>
 
 			<div id="projects" ref={projectsRef} className="h-screen">
