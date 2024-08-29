@@ -61,7 +61,7 @@ const Projects = () => {
 				</div>
 				<p className="text-white/90 text-2xl font-semibold animate-slide-in-down delay-500">{RECENT_PROJECT}</p>
 			</div>
-			<div className='text-primary-color w-full gap-2 justify-around items-center flex flex-row' >
+			<div className='text-primary-color w-full gap-2 justify-around items-center flex flex-col sm:flex-row' >
 				{ProjectList.map((project, index) => (
 					<div className="animate-slide-in-down" key={index} >
 						<ProjectCard setIsProductViewOpen={handleOpenProject} projectImg={project.img} projectName={project.name} />
