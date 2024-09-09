@@ -73,7 +73,7 @@ const Skills = () => {
 				className={`animate-slide-in-left w-[40%] h-[80%] items-start flex flex-col justify-start pt-[4%] `}
 				ref={containerRef}
 			>
-				<div className=' grid  sm:grid-cols-[100px_100px_100px_100px_100px_100px_100px_100px_100px_100px_100px] grid-cols-[70px_70px_70px_70px] grid-rows-[70px_70px_70px_70px]  sm:gap-y-8 sm:gap-x-8 '>
+				<div className=' grid  sm:grid-cols-[100px_100px_100px_100px_100px_100px_100px_100px_100px_100px_100px] grid-cols-[70px_70px_70px_70px_70px_70px] grid-rows-[70px_70px_70px_70px]  sm:gap-y-8 sm:gap-x-8 '>
 					{SKILLS.map((skill, index) => (
 						<GenericSkill
 							key={index}
