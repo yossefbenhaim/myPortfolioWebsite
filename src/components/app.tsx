@@ -1,4 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
+import { useAppSelector } from 'redux/store';
+import { setActiveSection } from 'redux/slice/activeSection';
+import { useDispatch } from 'react-redux';
+
 import Navbar from '../components/navbar/navbar'; // Adjust the import path as necessary
 import Home from './home/home';
 import About from './about/about';
@@ -7,7 +11,8 @@ import Contact from './contact/contact';
 import Skills from './about/skills/skills';
 
 const App = () => {
-	const [activeSection, setActiveSection] = useState('');
+	const dispatch = useDispatch();
+	const activeSection = useAppSelector((state) => state.activeSection.activeSection)
 
 	const homeRef = useRef(null);
 	const aboutRef = useRef(null);
@@ -26,12 +31,12 @@ const App = () => {
 			(entries) => {
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
-						setActiveSection(entry.target.id);
+						dispatch(setActiveSection({ activeSection: entry.target.id }))
 					}
 				});
 			},
 			{
-				threshold: 0.6, // Adjust as necessary to control when the section is considered "in view"
+				threshold: 0.6,
 			}
 		);
 
@@ -39,7 +44,7 @@ const App = () => {
 			if (ref.current) {
 				observer.observe(ref.current);
 			}
-		});
+		})
 
 		return () => {
 			sections.forEach(({ ref }) => {
@@ -50,22 +55,22 @@ const App = () => {
 		};
 	}, []);
 
-	const scrollToSection = (id: string) => {
-		const section = document.getElementById(id);
+	useEffect(() => {
+		const section = document.getElementById(activeSection);
 		if (section) {
 			section.scrollIntoView({ behavior: 'smooth' });
 		}
-	};
+	}, [activeSection])
 
 	return (
 		<div className='flex flex-col justify-between'>
-			<Navbar scrollToSection={scrollToSection} activeSection={activeSection} />
+			<Navbar />
 
 			<div id="home" ref={homeRef} className="h-screen">
 				<Home />
 			</div>
 
-			<div id="about" ref={aboutRef} className="h-full flex flex-col justify-between">
+			<div id="about" ref={aboutRef} className="h-full w-full flex flex-col justify-between">
 				<About />
 				<Skills />
 			</div>

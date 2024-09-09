@@ -1,3 +1,5 @@
+import { useDispatch } from "react-redux";
+import { setActiveSection } from "redux/slice/activeSection";
 
 interface Props {
 	name: string
@@ -5,8 +7,12 @@ interface Props {
 }
 
 const GenericButton = ({ name, pathNavigate }: Props) => {
+	const dispatch = useDispatch();
 
 	const navigationPage = (path: string) => {
+		console.log(path);
+
+		dispatch(setActiveSection({ activeSection: path }))
 	}
 
 	return (

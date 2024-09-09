@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { DEVELOPER_FIRST_NAME, DEVELOPER_LAST_NAME } from 'common/developerIntroduction/developerIntroduction';
 import { NavbarOptions } from 'models/enums/toolbarOptions';
 import { PathName } from 'models/enums/pathName';
+import { useDispatch } from 'react-redux';
+import { setActiveSection } from 'redux/slice/activeSection';
+import { useAppSelector } from 'redux/store';
 
 interface Navbar {
 	item: string;
@@ -15,25 +18,24 @@ const NavbarPathOptions: Navbar[] = [
 	{ item: NavbarOptions.CONTACT, path: PathName.CONTACT },
 ];
 
-interface Props {
-	scrollToSection: (id: string) => void;
-	activeSection: string;
-}
 
-const Navbar = ({ scrollToSection, activeSection }: Props) => {
+const Navbar = () => {
 	const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+	const dispatch = useDispatch();
+	const activeSection = useAppSelector((state) => state.activeSection.activeSection)
+
 
 	const toggleMobileMenu = () => {
 		setMobileMenuOpen(!isMobileMenuOpen);
 	};
 
 	const navigationPage = (path: string) => {
-		scrollToSection(path);
+		dispatch(setActiveSection({ activeSection: path }));
 		setMobileMenuOpen(false);
 	};
 
 	return (
-		<div className='z-50 sticky top-0  pr-[10%] w-full h-[70px] bg-[#15152a]/20 items-end flex flex-row justify-between backdrop-blur-lg'>
+		<div className='z-50 sticky top-0  pr-[10%]  h-[70px] bg-[#15152a]/20 items-end flex flex-row justify-between backdrop-blur-lg'>
 			<div className='flex flex-row gap-2 h-full justify-end items-center w-[250px]'>
 				<p className='text-white/90 font-semibold'>{DEVELOPER_FIRST_NAME}</p>
 				<p className='text-primary-color font-semibold'>{DEVELOPER_LAST_NAME}</p>

@@ -5,17 +5,19 @@ import { configureStore } from '@reduxjs/toolkit';
 import { SlicesNames } from 'models/enums/slicesNames';
 
 import storage from 'redux-persist/lib/storage';
-import isContactWithMe from './slice/isContactWithMe';
+import isContactWithMeReducer from './slice/isContactWithMe';
+import activeSectionReducer from './slice/activeSection';
 
 const persistConfig = {
     key: 'root',
     type: storage,
     storage,
-    whitelist: [SlicesNames.IS_CONTACT_WITH_ME],
+    whitelist: [SlicesNames.IS_CONTACT_WITH_ME, SlicesNames.ACTIVE_SECTION],
 };
 
 const rootReducer = combineReducers({
-    [SlicesNames.IS_CONTACT_WITH_ME]: isContactWithMe,
+    [SlicesNames.IS_CONTACT_WITH_ME]: isContactWithMeReducer,
+    [SlicesNames.ACTIVE_SECTION]: activeSectionReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
@@ -30,9 +32,9 @@ const store = configureStore({
         }),
 });
 
-const persistodStore = persistStore(store);
+const persistedStore = persistStore(store);
 export type AddDispatch = typeof store.dispatch;
 export const useAppSelector: TypedUseSelectorHook<
     ReturnType<typeof store.getState>
 > = useSelector;
-export { store, persistodStore };
+export { store, persistedStore };
