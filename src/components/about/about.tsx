@@ -2,7 +2,6 @@ import { PathName } from "models/enums/pathName"
 
 import DeveloperImage from "common/developerImage/developerImage"
 import DeveloperIntroduction from "common/developerIntroduction/developerIntroduction"
-import Skills from "./skills/skills"
 
 
 const BUTTON_TEXT = `Contact me`

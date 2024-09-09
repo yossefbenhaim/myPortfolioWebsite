@@ -70,7 +70,7 @@ const App = () => {
 				<Home />
 			</div>
 
-			<div id="about" ref={aboutRef} className="h-full w-full flex flex-col justify-between">
+			<div id="about" ref={aboutRef} className="h-full w-full flex flex-col gap-20">
 				<About />
 				<Skills />
 			</div>

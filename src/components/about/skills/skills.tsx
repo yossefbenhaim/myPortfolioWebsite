@@ -68,12 +68,18 @@ const Skills = () => {
 	});
 
 	return (
-		<div className=" h-full w-full pl-12 flex flex-col sm:flex-row justify-between items-start ">
-			<div
-				className={`animate-slide-in-left w-[40%] h-[80%] items-start flex flex-col justify-start pt-[4%] `}
+		<div className="  h-[50%]  w-full px-8 flex flex-col  justify-center items-center ">
+			<div className="flex flex-col justify-center items-center w-full h-[10%]">
+				<div className="flex flex-row gap-2 animate-slide-in-down ">
+					<p className="text-white/90 text-2xl font-semibold">My</p>
+					<p className="text-primary-color text-2xl font-semibold">Skills</p>
+				</div>
+			</div>
+			<div className=' animate-slide-in-left w-full h-[10%] flex flex-col justify-center items-center '
 				ref={containerRef}
 			>
-				<div className=' grid  sm:grid-cols-[100px_100px_100px_100px_100px_100px_100px_100px_100px_100px_100px] grid-cols-[70px_70px_70px_70px_70px_70px] grid-rows-[70px_70px_70px_70px]  sm:gap-y-8 sm:gap-x-8 '>
+
+				<div className=' grid  sm:grid-cols-[100px_100px_100px_100px_100px_100px_100px_100px_100px_100px_100px] grid-cols-[70px_70px_70px_70px_70px_70px] grid-rows-[70px_70px_70px_70px]  sm:gap-y-8 sm:gap-x-8  '>
 					{SKILLS.map((skill, index) => (
 						<GenericSkill
 							key={index}
