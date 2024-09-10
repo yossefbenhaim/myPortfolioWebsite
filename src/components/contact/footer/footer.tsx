@@ -4,12 +4,15 @@ import useIntersectionObserver from 'components/about/skills/useIntersectionObse
 import GenericIconsList from 'common/genericIconsList/genericIconsList';
 import linkedin from '../../../assets/icons/linkedin.svg';
 import git from '../../../assets/icons/git.svg';
+import email from '../../../assets/icons/email.svg';
+import phone from '../../../assets/icons/phone.svg';
+
 
 const FOOTER_TEXT = '© 2024 Yossef Ben Haim. All rights reserved.';
-const DEVELOPER_TITLE = 'Full Stack Developer';
+const PHONE = '0537402430';
 const FIRST_NAME = 'Yossef';
 const LAST_NAME = 'Ben Haim';
-
+const EMAIL = 'yossef7875gmail.com'
 const contactIcons: IconOptions[] = [
 	{ icon: git, url: 'https://github.com/yossefbenhaim' },
 	{ icon: linkedin, url: 'https://www.linkedin.com/in/yossef-ben-haim/' },
@@ -27,8 +30,21 @@ const Footer = () => {
 					<div className="sm:text-xl text-sm font-semibold flex flex-row gap-2">
 						<p>{FIRST_NAME}</p>
 						<p className="text-primary-color">{LAST_NAME}</p>
+					</div >
+					<div className='w-full grid grid-cols-[30px_30px] grid-rows-2 items-center'>
+						<img
+							className="p-[2px] w-[20px] h-[20px] "
+							src={phone}
+							alt="Icon"
+						/>
+						<p className="sm:text-sm text-xs">{PHONE}</p>
+						<img
+							className="p-[2px] w-[20px] h-[20px]  "
+							src={email}
+							alt="Icon"
+						/>
+						<a href={EMAIL}>{EMAIL}</a>
 					</div>
-					<p className="sm:text-sm text-xs">{DEVELOPER_TITLE}</p>
 				</div>
 				<div className="flex flex-row items-center justify-center gap-4 w-[20%]">
 					<GenericIconsList contactIcons={contactIcons} />
