@@ -24,7 +24,7 @@ const Footer = () => {
 		<div className="bg-black/40 w-full h-[35%]">
 			<div ref={containerRef} className={`${isVisible ? 'animate-slide-in-down-footer' : 'opacity-0'} text-white/90 h-full flex flex-row justify-between items-center px-[10%]`}>
 				<div className="flex flex-col gap-2 justify-center items-start w-[35%]">
-					<div className="sm:text-xl text-base font-semibold flex flex-row gap-2">
+					<div className="sm:text-xl text-sm font-semibold flex flex-row gap-2">
 						<p>{FIRST_NAME}</p>
 						<p className="text-primary-color">{LAST_NAME}</p>
 					</div>
