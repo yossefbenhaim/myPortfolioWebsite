@@ -43,7 +43,7 @@ const Footer = () => {
 							src={email}
 							alt="Icon"
 						/>
-						<a href={EMAIL}>{EMAIL}</a>
+						<a className="sm:text-sm text-xs" href={EMAIL}>{EMAIL}</a>
 					</div>
 				</div>
 				<div className="flex flex-row items-center justify-center gap-4 w-[20%]">
