@@ -53,7 +53,7 @@ const Projects = () => {
 	}
 
 	return (
-		<div className="flex flex-col pt-[6%] px-[10%] gap-5 items-center h-full ">
+		<div className="flex flex-col sm:justify-center  pt-[6%] px-[10%] gap-5 items-center h-full ">
 			<div className="flex flex-col justify-center items-center w-full h-[10%]">
 				<div className="flex flex-row gap-2 animate-slide-in-down ">
 					<p className="text-white/90  ">{MY}</p>

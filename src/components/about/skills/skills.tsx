@@ -75,11 +75,11 @@ const Skills = () => {
 					<p className="text-primary-color text-2xl font-semibold">Skills</p>
 				</div>
 			</div>
-			<div className=' animate-slide-in-left w-full h-[10%] flex flex-col justify-center items-center '
+			<div className=' animate-slide-in-left w-full h-full flex flex-col justify-center items-center '
 				ref={containerRef}
 			>
 
-				<div className=' grid  sm:grid-cols-[100px_100px_100px_100px_100px_100px_100px_100px_100px_100px_100px] grid-cols-[70px_70px_70px_70px_70px_70px] grid-rows-[70px_70px_70px_70px]  sm:gap-y-8 sm:gap-x-8  '>
+				<div className='  grid sm:grid-rows-2  sm:grid-cols-[100px_100px_100px_100px_100px_100px_100px_100px_100px_100px_100px] grid-cols-[70px_70px_70px_70px_70px_70px] grid-rows-[70px_70px_70px_70px]  sm:gap-y-8 sm:gap-x-8  '>
 					{SKILLS.map((skill, index) => (
 						<GenericSkill
 							key={index}

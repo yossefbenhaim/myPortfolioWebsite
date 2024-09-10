@@ -53,10 +53,10 @@ const ContactForm = () => {
 			<form
 				ref={form}
 				onSubmit={handleSubmit(onSubmit)}
-				className="flex flex-col sm:w-full 2xl:w-[60%]  sm:h-[85%] h-full justify-between items-center animate-slide-in-down"
+				className="py-3 flex flex-col  sm:w-full 2xl:w-[60%]  h-[85%]  items-center animate-slide-in-down"
 			>
 				<div className="w-full h-full flex flex-col justify-between items-center">
-					<div className="p-3 gap-2 sm:h-[20%] w-full flex sm:flex-row flex-col justify-between items-center">
+					<div className="p-3 gap-2 sm:h-[50%] w-full flex sm:flex-row flex-col justify-between items-center">
 						<CustomTextField name={ContactFormKeys.NAME} />
 						<CustomTextField name={ContactFormKeys.EMAIL} />
 					</div>
@@ -64,7 +64,7 @@ const ContactForm = () => {
 						<CustomTextField name={ContactFormKeys.MESSAGE} isTextarea={true} />
 					</div>
 				</div>
-				<div>
+				<div className='h-[10%]'>
 					<GenericButton pathNavigate={PathName.CONTACT} name={SENS_MESSAGE} />
 				</div>
 			</form>

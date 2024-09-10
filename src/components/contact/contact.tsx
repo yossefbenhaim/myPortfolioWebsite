@@ -14,10 +14,10 @@ const Contact = () => {
 	const IsContactWithMe = useAppSelector((state) => state.isContactWithMe.isContactWithMe);
 
 	return (
-		<div className=" w-full h-full ">
+		<div className=" w-full h-full pt-14">
 			{IsContactWithMe ? <ThankYouContact />
 				:
-				<div className='  px-[10%] w-full h-[90vh] flex flex-col gap-5 items-center pt-[5%] pb-[2%] '>
+				<div className='  px-[10%] w-full h-full flex flex-col gap-2 items-center pt-[5%] pb-[2%] '>
 					<Heder title={CONTACT_ME} openingSentence1={GET_IN} openingSentence2={TOUCH} />
 					<ContactForm />
 				</div>
