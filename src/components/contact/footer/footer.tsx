@@ -24,16 +24,16 @@ const Footer = () => {
 		<div className="bg-black/40 w-full h-[35%]">
 			<div ref={containerRef} className={`${isVisible ? 'animate-slide-in-down-footer' : 'opacity-0'} text-white/90 h-full flex flex-row justify-between items-center px-[10%]`}>
 				<div className="flex flex-col gap-2 justify-center items-start w-[35%]">
-					<div className="text-xl font-semibold flex flex-row gap-2">
+					<div className="sm:text-xl text-base font-semibold flex flex-row gap-2">
 						<p>{FIRST_NAME}</p>
 						<p className="text-primary-color">{LAST_NAME}</p>
 					</div>
-					<p className="text-sm">{DEVELOPER_TITLE}</p>
+					<p className="sm:text-sm text-xs">{DEVELOPER_TITLE}</p>
 				</div>
 				<div className="flex flex-row items-center justify-center gap-4 w-[20%]">
 					<GenericIconsList contactIcons={contactIcons} />
 				</div>
-				<div className="text-sm flex flex-row justify-center items-center w-[35%]">
+				<div className="sm:text-sm text-xs flex flex-row justify-center items-center w-[35%]">
 					{FOOTER_TEXT}
 				</div>
 			</div>
