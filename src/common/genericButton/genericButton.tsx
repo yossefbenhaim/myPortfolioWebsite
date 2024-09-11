@@ -10,7 +10,11 @@ const GenericButton = ({ name, pathNavigate }: Props) => {
 	const dispatch = useDispatch();
 
 	const navigationPage = (path: string) => {
-		dispatch(setActiveSection({ activeSection: path }))
+		const section = document.getElementById(path);
+		if (section) {
+			section.scrollIntoView({ behavior: 'smooth' });
+		}
+		dispatch(setActiveSection({ activeSection: path }));
 	}
 
 	return (

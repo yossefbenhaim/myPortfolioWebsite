@@ -56,12 +56,7 @@ const App = () => {
 		};
 	}, []);
 
-	useEffect(() => {
-		const section = document.getElementById(activeSection);
-		if (section) {
-			section.scrollIntoView({ behavior: 'smooth' });
-		}
-	}, [activeSection])
+
 
 	return (
 		<div className='flex flex-col justify-between'>
