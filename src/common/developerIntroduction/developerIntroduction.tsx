@@ -38,7 +38,7 @@ const DeveloperIntroduction = ({ pathName, buttonText, documentationText, docume
 				<p className="text-xl">{openingSentence1}</p>
 				<p className="text-primary-color text-xl">{openingSentence2}</p>
 			</div>
-			{pathName === PathName.HOME && <p className="text-primary-color font-bold text-5xl">{DEVELOPER_FIRST_NAME + ' ' + DEVELOPER_LAST_NAME}</p>}
+			{pathName === PathName.CONTACT && <p className="text-primary-color font-bold text-5xl">{DEVELOPER_FIRST_NAME + ' ' + DEVELOPER_LAST_NAME}</p>}
 			<p className="text-3xl text-white/90 ">{documentationTitle}</p>
 			<p className="text-gray-400 text-base">{documentationText}</p>
 			<div className='w-[140px]'>

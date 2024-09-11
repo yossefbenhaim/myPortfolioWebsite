@@ -19,7 +19,7 @@ const About = () => {
 			</div>
 			<div className="h-full sm:w-[50%] w-full">
 				<DeveloperIntroduction
-					pathName={PathName.ABOUT}
+					pathName={PathName.PROJECTS}
 					buttonText={BUTTON_TEXT}
 					documentationText={DOCUMENTATION_TEXT}
 					documentationTitle={DOCUMENTATION_TITLE}

@@ -10,8 +10,6 @@ const GenericButton = ({ name, pathNavigate }: Props) => {
 	const dispatch = useDispatch();
 
 	const navigationPage = (path: string) => {
-		console.log(path);
-
 		dispatch(setActiveSection({ activeSection: path }))
 	}
 

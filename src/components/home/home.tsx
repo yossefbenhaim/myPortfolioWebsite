@@ -13,7 +13,7 @@ const Home: React.FC = () => {
 	return (
 		<div className="pt-12 px-[10%] h-full w-full flex flex-col gap-5 sm:flex-row  justify-between items-start">
 			<DeveloperIntroduction
-				pathName={PathName.HOME}
+				pathName={PathName.CONTACT}
 				buttonText={BUTTON_TEXT}
 				documentationText={DOCUMENTATION_TEXT}
 				documentationTitle={DOCUMENTATION_TITLE}
