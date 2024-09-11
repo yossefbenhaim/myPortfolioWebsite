@@ -5,6 +5,8 @@ import GenericIconsList from 'common/genericIconsList/genericIconsList';
 import linkedin from '../../assets/icons/linkedin.svg';
 import git from '../../assets/icons/git.svg';
 import GenericButton from 'common/genericButton/genericButton';
+import { useAppSelector } from 'redux/store';
+import { PathName } from 'models/enums/pathName';
 
 export const DEVELOPER_FIRST_NAME = 'Yossef';
 export const DEVELOPER_LAST_NAME = 'Ben Haim';
@@ -36,7 +38,7 @@ const DeveloperIntroduction = ({ pathName, buttonText, documentationText, docume
 				<p className="text-xl">{openingSentence1}</p>
 				<p className="text-primary-color text-xl">{openingSentence2}</p>
 			</div>
-			{<p className="text-primary-color font-bold text-5xl">{DEVELOPER_FIRST_NAME + ' ' + DEVELOPER_LAST_NAME}</p>}
+			{pathName === PathName.HOME && <p className="text-primary-color font-bold text-5xl">{DEVELOPER_FIRST_NAME + ' ' + DEVELOPER_LAST_NAME}</p>}
 			<p className="text-3xl text-white/90 ">{documentationTitle}</p>
 			<p className="text-gray-400 text-base">{documentationText}</p>
 			<div className='w-[140px]'>

@@ -30,9 +30,14 @@ const Navbar = () => {
 	};
 
 	const navigationPage = (path: string) => {
+		const section = document.getElementById(path);
+		if (section) {
+			section.scrollIntoView({ behavior: 'smooth' });
+		}
 		dispatch(setActiveSection({ activeSection: path }));
 		setMobileMenuOpen(false);
 	};
+
 
 	return (
 		<div className='z-50 sticky top-0  pr-[10%]  h-[70px] bg-[#15152a]/20 items-end flex flex-row justify-between backdrop-blur-lg'>

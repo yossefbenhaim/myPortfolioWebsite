@@ -9,6 +9,7 @@ import About from './about/about';
 import Projects from './projects/projects';
 import Contact from './contact/contact';
 import Skills from './about/skills/skills';
+import { PathName } from 'models/enums/pathName';
 
 const App = () => {
 	const dispatch = useDispatch();
@@ -21,10 +22,10 @@ const App = () => {
 
 	useEffect(() => {
 		const sections = [
-			{ id: 'home', ref: homeRef },
-			{ id: 'about', ref: aboutRef },
-			{ id: 'projects', ref: projectsRef },
-			{ id: 'contact', ref: contactRef }
+			{ id: PathName.HOME, ref: homeRef },
+			{ id: PathName.ABOUT, ref: aboutRef },
+			{ id: PathName.PROJECTS, ref: projectsRef },
+			{ id: PathName.CONTACT, ref: contactRef }
 		];
 
 		const observer = new IntersectionObserver(

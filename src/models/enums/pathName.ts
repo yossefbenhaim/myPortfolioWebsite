@@ -3,5 +3,4 @@ export enum PathName {
     ABOUT = 'about',
     PROJECTS = 'projects',
     CONTACT = 'contact',
-    LIBRARY = 'library',
 }
