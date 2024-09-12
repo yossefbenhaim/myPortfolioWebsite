@@ -19,6 +19,7 @@ interface Props {
 	documentationText: string;
 	buttonText: string;
 	pathName: string;
+	section: string
 }
 
 const contactIcons: IconOptions[] = [
@@ -26,7 +27,7 @@ const contactIcons: IconOptions[] = [
 	{ icon: linkedin, url: 'https://www.linkedin.com/in/yossef-ben-haim/' },
 ];
 
-const DeveloperIntroduction = ({ pathName, buttonText, documentationText, documentationTitle, openingSentence1, openingSentence2 }: Props) => {
+const DeveloperIntroduction = ({ pathName, buttonText, section, documentationText, documentationTitle, openingSentence1, openingSentence2 }: Props) => {
 
 	const [containerRef, isVisible] = useIntersectionObserver({
 		threshold: 0.1
@@ -38,7 +39,7 @@ const DeveloperIntroduction = ({ pathName, buttonText, documentationText, docume
 				<p className="text-xl">{openingSentence1}</p>
 				<p className="text-primary-color text-xl">{openingSentence2}</p>
 			</div>
-			{pathName === PathName.CONTACT && <p className="text-primary-color font-bold text-5xl">{DEVELOPER_FIRST_NAME + ' ' + DEVELOPER_LAST_NAME}</p>}
+			{section === PathName.HOME && <p className="text-primary-color font-bold text-5xl">{DEVELOPER_FIRST_NAME + ' ' + DEVELOPER_LAST_NAME}</p>}
 			<p className="text-3xl text-white/90 ">{documentationTitle}</p>
 			<p className="text-gray-400 text-base">{documentationText}</p>
 			<div className='w-[140px]'>

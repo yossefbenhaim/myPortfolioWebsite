@@ -24,6 +24,12 @@ import postgraphile from '../../../assets/icons/postgraphile.svg'
 import webSocket from '../../../assets/icons/webSocket.svg'
 import mongoDB from '../../../assets/icons/mongodb.svg'
 import docker from '../../../assets/icons/docker.svg'
+import { useGSAP } from "@gsap/react";
+import { useRef } from 'react';
+import gsap from "gsap";
+
+
+gsap.registerPlugin(useGSAP);
 
 export interface Skill {
 	name: string,
@@ -63,9 +69,22 @@ const SKILLS: Skill[] = [
 ];
 
 const Skills = () => {
-	const [containerRef, isVisible] = useIntersectionObserver({
-		threshold: 0.1
-	});
+	gsap.registerPlugin(useGSAP);
+	const container = useRef(null)
+
+	useGSAP(() => {
+		gsap.from(".circle", {
+			scale: 0,
+			duration: 1,
+			ease: 'power2.inOut',
+			yoyo: true,
+			opacity: 0,
+			stagger: {
+				each: 0.1
+			}
+		}
+		)
+	}, { scope: container });
 
 	return (
 		<div className="  h-[50%]  w-full px-8 flex flex-col  justify-center items-center ">
@@ -75,11 +94,9 @@ const Skills = () => {
 					<p className="text-primary-color text-2xl font-semibold">Skills</p>
 				</div>
 			</div>
-			<div className=' animate-slide-in-left w-full h-full flex flex-col justify-center items-center '
-				ref={containerRef}
+			<div className=' w-full h-full flex flex-col justify-center items-center '
 			>
-
-				<div className='  grid sm:grid-rows-2  sm:grid-cols-[100px_100px_100px_100px_100px_100px_100px_100px_100px_100px_100px] grid-cols-[70px_70px_70px_70px_70px_70px] grid-rows-[70px_70px_70px_70px]  sm:gap-y-8 sm:gap-x-8  '>
+				<div ref={container} className='  grid sm:grid-rows-2  sm:grid-cols-[100px_100px_100px_100px_100px_100px_100px_100px_100px_100px_100px] grid-cols-[70px_70px_70px_70px_70px_70px] grid-rows-[70px_70px_70px_70px]  sm:gap-y-8 sm:gap-x-8  '>
 					{SKILLS.map((skill, index) => (
 						<GenericSkill
 							key={index}

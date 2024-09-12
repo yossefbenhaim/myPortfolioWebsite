@@ -13,7 +13,6 @@ import { PathName } from 'models/enums/pathName';
 
 const App = () => {
 	const dispatch = useDispatch();
-	const activeSection = useAppSelector((state) => state.activeSection.activeSection)
 
 	const homeRef = useRef(null);
 	const aboutRef = useRef(null);
