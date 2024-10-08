@@ -4,8 +4,8 @@ import DeveloperImage from '../../common/developerImage/developerImage';
 import React from 'react';
 
 const BUTTON_TEXT = `Let's Talk`
-const DOCUMENTATION_TEXT = `Experienced Full Stack Developer proficient in front-end and back-end technologies, adept in web development.`;
-const DOCUMENTATION_TITLE = 'Full Stack Developer'
+const DOCUMENTATION_TEXT = `With 3 years of expertise in designing, developing, and maintaining web applications. Skilled in diverse technologies and problem-solving. A dedicated team player passionate about innovation, efficiency, and continuous learning.`;
+const DOCUMENTATION_TITLE = 'Full Stack Developer at IDF'
 const OPENING_SENTENCE_1 = 'Hello'
 const OPENING_SENTENCE_2 = `I'm`
 

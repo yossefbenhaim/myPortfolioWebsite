@@ -5,7 +5,7 @@ import DeveloperIntroduction from "common/developerIntroduction/developerIntrodu
 
 
 const BUTTON_TEXT = `Contact me`
-const DOCUMENTATION_TEXT = 'As a Full Stack Developer at IDF, I led complex projects, developed secure systems using Node.js and Express, integrated Kafka for data processing, and implemented a React application with dynamic geospatial mapping and microservices. I have a Program Engineer from Ashkelon College.'
+const DOCUMENTATION_TEXT = 'Experience designing and maintaining dynamic web applications. Specializing in both front-end and back-end technologies, I create high-performance solutions with a focus on real-time systems, data visualization, and microservices, I specialize in using technologies like Node.js, TypeScript, React, and PostgreSQL to build scalable and efficient applications. These tools enable me to deliver real-time performance, secure data handling, and intuitive user interfaces, ensuring seamless user experiences.'
 const DOCUMENTATION_TITLE = 'About me'
 const OPENING_SENTENCE_1 = 'My'
 const OPENING_SENTENCE_2 = `intro`
@@ -13,7 +13,7 @@ const OPENING_SENTENCE_2 = `intro`
 
 const About = () => {
 	return (
-		<div className=" flex flex-row justify-between h-[50%] px-[10%] ">
+		<div className=" flex flex-row justify-between  h-full px-[10%] ">
 			<div className=" sm:flex hidden w-[50%]">
 				<DeveloperImage />
 			</div>

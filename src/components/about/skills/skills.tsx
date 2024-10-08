@@ -87,7 +87,7 @@ const Skills = () => {
 	}, { scope: container });
 
 	return (
-		<div className="  sm:h-[50%] h-[450px]  w-full px-8 flex flex-col  justify-center items-center ">
+		<div className="  h-full  w-full px-8 flex flex-col  gap-8 items-center ">
 			<div className="flex flex-col justify-center items-center w-full h-[10%]">
 				<div className="flex flex-row gap-2 animate-slide-in-down ">
 					<p className="text-white/90 text-2xl font-semibold">My</p>

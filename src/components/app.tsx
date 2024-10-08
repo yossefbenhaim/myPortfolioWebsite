@@ -18,11 +18,13 @@ const App = () => {
 	const aboutRef = useRef(null);
 	const projectsRef = useRef(null);
 	const contactRef = useRef(null);
+	const skillsRef = useRef(null);
 
 	useEffect(() => {
 		const sections = [
 			{ id: PathName.HOME, ref: homeRef },
 			{ id: PathName.ABOUT, ref: aboutRef },
+			{ id: PathName.SKILLS, ref: skillsRef },
 			{ id: PathName.PROJECTS, ref: projectsRef },
 			{ id: PathName.CONTACT, ref: contactRef }
 		];
@@ -60,21 +62,21 @@ const App = () => {
 	return (
 		<div className='flex flex-col justify-between'>
 			<Navbar />
-
-			<div id="home" ref={homeRef} className="h-screen">
+			<div id="home" ref={homeRef} className="sm:h-screen h-[150vh]">
 				<Home />
 			</div>
-
-			<div id="about" ref={aboutRef} className="h-full w-full flex flex-col gap-20">
+			<div id="about" ref={aboutRef} className=" h-full w-full flex flex-col gap-20">
 				<About />
+			</div>
+			<div id="skill" ref={skillsRef} className=" h-[50vh] pt-10 w-full flex flex-col gap-20">
 				<Skills />
 			</div>
 
-			<div id="projects" ref={projectsRef} className="h-screen">
+			<div id="projects" ref={projectsRef} className="sm:h-screen h-[150vh]">
 				<Projects />
 			</div>
 
-			<div id="contact" ref={contactRef} className="h-screen">
+			<div id="contact" ref={contactRef} className="h-screen ">
 				<Contact />
 			</div>
 		</div>
