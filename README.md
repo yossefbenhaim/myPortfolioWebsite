@@ -27,3 +27,4 @@ Clone the project to your local machine:
 ```bash
 git clone <repository-url>
 cd up_admin
+khnjlkhj
