@@ -10,7 +10,7 @@ WORKDIR /app
 # התקנת תלויות על בסיס קבצי ה-manifest
 COPY package*.json ./
 # אם אתה עם pnpm/yarn – החלף לפקודות המקבילות
-RUN npm ci
+RUN npm install
 
 # העתקת שאר הקוד ובנייה
 COPY . .
